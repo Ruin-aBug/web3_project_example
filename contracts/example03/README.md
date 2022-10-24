@@ -19,6 +19,11 @@ data:image/svg+xml;base64,IDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIi
 
 这样solidity就可以进行处理了，只需要将svg的标签和字符串序列转换为base64，然后就可以存储在链上了，从而不需要对象存储。
 具体实现可自行查看合约[ChainBattles.sol](ChainBattles.sol)或[区块浏览器](https://mumbai.polygonscan.com/address/0xD6Cf928B37e694807CEa32C3ed733CeE3AB2Ea60#code)进行查看。
+
+该合约我是部署在polygon mumbai测试网上的，部署命令：
+```shell
+yarn hardhat deploy --network mumbai --tags chainbattle
+```
 ### mint NFT
 可在区块浏览器上进行NFT mint，[去mint](https://mumbai.polygonscan.com/address/0xd6cf928b37e694807cea32c3ed733cee3ab2ea60#writeContract)
 
