@@ -1,5 +1,4 @@
 import * as dotenv from "dotenv";
-import { getChainId } from "hardhat";
 import { HardhatUserConfig, task } from "hardhat/config";
 import "hardhat-gas-reporter";
 import "hardhat-deploy";
@@ -24,7 +23,7 @@ const mumbai_url = process.env.POLYGON_TEST_RPC_URL || "";
 const accounts = process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [];
 const etherscan_key = process.env.ETHERSCAN_API_KEY || "";
 const bscscan_key = process.env.BSCSCAN_API_KEY || "";
-const polygonscan_key = process.env.POLYGONSCAN_KEY || "";
+const polygonscan_key = process.env.POLYGONSCAN_API_KEY || "";
 const coinmarket_api_key = process.env.COINMARKETCAP_API_KEY || "";
 
 // 使用方法yarn hardhat block-number --network networkName
