@@ -24,3 +24,7 @@ yarn hardhat deploy --network networkName --tags deployTags
 ## example02
 这是一个购买咖啡并留言的Dapp项目，用户通过点击发送0.001ETH来进行咖啡购买留言，支付的0.001ETH会存储在合约中，通过调用withdrawTips()方法提取到用户钱包。
 具体可查看[/contracts/example02/](./contracts/example02/)详细介绍。
+
+## example03
+这是一个动态的NFT，NFT的所有元数据都是存储在链上的，通过链上数据的改变来修改元数据及图片。
+具体实现请查看[/contract/example03](./contracts/example03/)
