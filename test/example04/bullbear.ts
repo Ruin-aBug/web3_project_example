@@ -55,7 +55,7 @@ async function main() {
 	await getCurrentPrice(bullBearContract);
 	await getTokenUri(bullBearContract);
 
-	await updatePrice(priceContract, "126995000000");
+	await updatePrice(priceContract, "166995000000");
 
 	await checkAndUpKeep(bullBearContract);
 
