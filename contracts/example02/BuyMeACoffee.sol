@@ -8,13 +8,8 @@ pragma solidity ^0.8.0;
 
 contract BuyMeACoffee {
     // Event to emit when a Memo is created.
-    event NewMemo(
-        address indexed from,
-        uint256 timestamp,
-        string name,
-        string message
-    );
-    
+    event NewMemo(address indexed from, uint256 timestamp, string name, string message);
+
     // Memo struct.
     struct Memo {
         address from;
@@ -22,7 +17,7 @@ contract BuyMeACoffee {
         string name;
         string message;
     }
-    
+
     // Address of contract deployer. Marked payable so that
     // we can withdraw to this address later.
     address payable owner;
@@ -53,20 +48,10 @@ contract BuyMeACoffee {
         require(msg.value > 0, "can't buy coffee for free!");
 
         // Add the memo to storage!
-        memos.push(Memo(
-            msg.sender,
-            block.timestamp,
-            _name,
-            _message
-        ));
+        memos.push(Memo(msg.sender, block.timestamp, _name, _message));
 
         // Emit a NewMemo event with details about the memo.
-        emit NewMemo(
-            msg.sender,
-            block.timestamp,
-            _name,
-            _message
-        );
+        emit NewMemo(msg.sender, block.timestamp, _name, _message);
     }
 
     /**

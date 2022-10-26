@@ -57,13 +57,7 @@ contract ChainBattles is ERC721URIStorage {
             "</text>",
             "</svg>"
         );
-        return
-            string(
-                abi.encodePacked(
-                    "data:image/svg+xml;base64,",
-                    Base64.encode(svg)
-                )
-            );
+        return string(abi.encodePacked("data:image/svg+xml;base64,", Base64.encode(svg)));
     }
 
     /**
@@ -85,13 +79,7 @@ contract ChainBattles is ERC721URIStorage {
             '"',
             "}"
         );
-        return
-            string(
-                abi.encodePacked(
-                    "data:application/json;base64,",
-                    Base64.encode(dataURI)
-                )
-            );
+        return string(abi.encodePacked("data:application/json;base64,", Base64.encode(dataURI)));
     }
 
     /**
@@ -99,10 +87,7 @@ contract ChainBattles is ERC721URIStorage {
      */
     function train(uint256 tokenId) public {
         require(_exists(tokenId), "Please use an existing token");
-        require(
-            ownerOf(tokenId) == msg.sender,
-            "You must own this token to train it"
-        );
+        require(ownerOf(tokenId) == msg.sender, "You must own this token to train it");
         uint256 currentLevel = tokenIdToLevels[tokenId];
         tokenIdToLevels[tokenId] = currentLevel + 1;
         _setTokenURI(tokenId, getTokenURI(tokenId));
