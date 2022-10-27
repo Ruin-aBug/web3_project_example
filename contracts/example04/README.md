@@ -155,3 +155,5 @@ function checkUpkeep(bytes calldata /* checkData */) external view override retu
 这里使用了chainlink库里面的[`MockV3Aggregator.sol`](./MockPriceFeed.sol)合约进行PriceFeed测试
 测试结果：
 ![example04](../../images/example04-1.png)
+测试完成后，就可以部署到正式网了
+各个网络的chainlink喂价合约地址[https://docs.chain.link/docs/data-feeds/price-feeds/addresses/](https://docs.chain.link/docs/data-feeds/price-feeds/addresses/)
