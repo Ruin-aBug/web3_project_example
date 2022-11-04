@@ -12,7 +12,7 @@ dotenv.config();
 
 // set proxy
 // 在国内需要通过hardhat-etherscan在etherscan上验证合约时，需要设置代理
-const proxyUrl = 'http://172.24.39.100:7890';   // change to yours, With the global proxy enabled, change the proxyUrl to your own proxy link. The port may be different for each client.
+const proxyUrl = "http://192.168.10.114:7890"; // change to yours, With the global proxy enabled, change the proxyUrl to your own proxy link. The port may be different for each client.
 import { ProxyAgent, setGlobalDispatcher } from "undici";
 const proxyAgent = new ProxyAgent(proxyUrl);
 setGlobalDispatcher(proxyAgent);
